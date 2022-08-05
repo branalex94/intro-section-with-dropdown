@@ -1,0 +1,135 @@
+.hamburger-menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 60vw;
+  background-color: $almostWhite;
+  height: 100vh;
+  color: $mediumGray;
+  z-index: 2;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+  &--open {
+    transform: translateX(0);
+  }
+  &__close-btn {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    padding-left: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    &-item {
+      &:hover {
+        cursor: pointer;
+        color: $almostBlack;
+      }
+      svg {
+        margin-left: 1rem;
+        transition: transform 0.5s ease;
+        &.open {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &-item__context {
+      display: inline-block;
+      height: 0;
+      overflow: hidden;
+      list-style: none;
+      transition: all 0.5s ease;
+      opacity: 0;
+      width: 0;
+      top: 150%;
+      left: 0;
+
+      &--open {
+        margin-top: 0.25rem;
+        padding: 1rem 0 0 2rem;
+        opacity: 1;
+        display: flex;
+        height: unset;
+        width: unset;
+        gap: 1rem;
+        flex-direction: column;
+      }
+      &-item {
+        display: flex;
+        gap: 0.75rem;
+      }
+    }
+  }
+  &__login {
+    text-align: center;
+    &:hover {
+      cursor: pointer;
+      color: $almostBlack;
+    }
+  }
+  &__register-btn {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid $mediumGray;
+    background-color: transparent;
+    color: $mediumGray;
+    &:hover {
+      cursor: pointer;
+      color: $almostBlack;
+      border-color: $almostBlack;
+    }
+  }
+}
+
+@include desktop-md-query {
+  .hamburger-menu {
+    position: initial;
+    height: initial;
+    transform: translate(0);
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex: 10;
+    justify-content: space-between;
+    &__list {
+      flex-direction: row;
+      margin: 0;
+    }
+    &__close-btn {
+      display: none;
+    }
+    &__btns {
+      display: flex;
+      gap: 1rem;
+      height: 5vh;
+      align-items: center;
+    }
+    &__register-btn {
+      width: initial;
+      margin: 0;
+    }
+  }
+
+  .context-menu {
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    .hamburger-menu__list-item__context {
+      position: absolute;
+      background: #fff;
+      box-shadow: 0px 0px 20px 5px #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      min-width: 7rem;
+    }
+  }
+}

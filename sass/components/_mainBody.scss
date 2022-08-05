@@ -1,0 +1,91 @@
+.home {
+  &__hero {
+    height: 60vh;
+    &-image {
+      background: url(../../src/assets/images/image-hero-mobile.png) no-repeat;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    display: block;
+    padding: 0.7rem 1rem;
+    background-color: $almostBlack;
+    color: $almostWhite;
+    border: none;
+    border-radius: 10px;
+    transition: color, background-color 0.25s ease;
+    &:hover {
+      color: $almostBlack;
+      background-color: $almostWhite;
+      outline: 1px solid $almostBlack;
+      cursor: pointer;
+    }
+  }
+
+  &-brands__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 0;
+  }
+
+  &-brands__item {
+    flex: 1;
+    svg {
+      transform: scale(0.7, 0.7);
+    }
+  }
+
+  h1,
+  p {
+    text-align: center;
+  }
+
+  p {
+    line-height: 1.5;
+    padding: 0 1rem;
+    color: $mediumGray;
+  }
+}
+
+@include desktop-md-query {
+  .home {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 80vh;
+    padding: 2rem 4rem;
+    gap: 3rem;
+    &__hero {
+      height: unset;
+      flex: 6;
+      &-image {
+        background-image: url(../../src/assets/images/image-hero-desktop.png);
+        background-size: contain;
+      }
+    }
+    &__left-container--desktop {
+      flex: 6;
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        padding-left: 0;
+      }
+      h1,
+      p {
+        text-align: left;
+      }
+    }
+    &__btn {
+      margin: 2rem 0;
+    }
+    &-brands__list {
+      margin-top: 5rem;
+    }
+  }
+}

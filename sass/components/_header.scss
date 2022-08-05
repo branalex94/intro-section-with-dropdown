@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+@include desktop-md-query {
+  .nav {
+    justify-content: flex-start;
+    align-items: center;
+    &__menu-icon {
+      display: none;
+    }
+    &__logo-container {
+      flex: 1;
+      padding-top: 1rem;
+    }
+  }
+}

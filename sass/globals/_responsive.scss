@@ -1,0 +1,11 @@
+@mixin desktop-md-query {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop-lg-query {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
