@@ -53,6 +53,10 @@
   }
 }
 
+.attribution {
+  text-align: center;
+}
+
 @include desktop-md-query {
   .home {
     display: flex;

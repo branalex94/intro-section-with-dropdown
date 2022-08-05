@@ -5,7 +5,8 @@ export default function Footer() {
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
         Frontend Mentor
       </a>
-      . Coded by <a href="#">Your Name Here</a>.
+      . Coded by <a href="frontendmentor.io/profile/branalex94">Brandon Aray</a>
+      .
     </footer>
   );
 }
