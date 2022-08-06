@@ -164,7 +164,7 @@ button {
   height: 60vh;
 }
 .home__hero-image {
-  background: url(../../src/assets/images/image-hero-mobile.png) no-repeat;
+  background: url(/src/assets/images/image-hero-mobile.png) no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -225,7 +225,7 @@ button {
     width: 100%;
   }
   .home__hero-image {
-    background-image: url(../../src/assets/images/image-hero-desktop.png);
+    background-image: url(/src/assets/images/image-hero-desktop.png);
     background-size: contain;
   }
   .home__left-container--desktop {
